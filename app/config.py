@@ -1,4 +1,4 @@
-from pydsntic_settings import BaseSettings
+from pydantic_settings import BaseSettings
 from typing import Optional
 
 class Settings(BaseSettings):
@@ -12,9 +12,11 @@ class Settings(BaseSettings):
 # my personal informantion  
 
     user_email: str = "kachimaxy2@gmail.com"
-    user_name: str = " Gerard Ugwu Onyedikachi"
-    user_stack: str = "Python, FastAPI, Django, Flask, SQLAlchemy, PostgreSQL, Docker, Kubernetes"
-
+    user_name: str = "Gerard Ugwu Onyedikachi"
+    user_stack: str = (
+        "Python, FastAPI, Django, Flask, SQLAlchemy, PostgreSQL, Docker, Kubernetes"
+    )
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
